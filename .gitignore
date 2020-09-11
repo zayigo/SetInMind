@@ -507,6 +507,4 @@ MigrationBackup/
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,linux,windows,node
 
 # Local testing
-public
-views
 config.json
