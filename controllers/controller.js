@@ -22,7 +22,7 @@ module.exports = (app) => {
   app.get('/', async (req, res) => {
     Note.find({}, (err, data) => {
       if (err) throw err;
-      res.render('todo', { data });
+      res.render('notes', { data });
     });
   });
 
