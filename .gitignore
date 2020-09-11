@@ -509,4 +509,4 @@ MigrationBackup/
 # Local testing
 public
 views
-config.js
+config.json

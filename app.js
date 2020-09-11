@@ -1,7 +1,11 @@
 const express = require('express');
 const rateLimit = require('express-rate-limit');
+const config = require('./config');
 const controller = require('./controllers/controller');
+
 require('express-async-errors');
+
+process.env.NODE_ENV = 'development';
 
 const logger = async (req, res, next) => {
   console.log(`Richiesta ${req.body}`);
@@ -14,17 +18,16 @@ const limiter = rateLimit({
 });
 
 const app = express();
-const port = 9999;
 app
   .use(limiter)
   .use(logger)
-  .use(express.static(__dirname + '/public'))
+  .use(express.static(`${__dirname}/public`))
   .use(express.urlencoded({ extended: true }))
   .set('view engine', 'ejs');
 
 // use controller
 controller(app);
 
-app.listen(port, () => {
-  console.log(`Avviato server @ http://localhost:${port}`);
+app.listen(global.gConfig.node_port, () => {
+  console.log(`Avviato server @ http://localhost:${global.gConfig.node_port}`);
 });
