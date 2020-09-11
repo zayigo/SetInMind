@@ -1,0 +1,42 @@
+{
+  "name": "pwm",
+  "version": "1.0.0",
+  "description": "Project for the pwm exam",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zayigo/ProgWeb.git"
+  },
+  "author": "Nicola Bontempelli - Filippo Savegnago",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "prettier": "^2.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^5.1.3",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.4"
+  },
+  "bugs": {
+    "url": "https://github.com/zayigo/ProgWeb/issues"
+  },
+  "homepage": "https://github.com/zayigo/ProgWeb#readme"
+}
