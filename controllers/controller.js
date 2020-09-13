@@ -27,18 +27,19 @@ module.exports = (app) => {
   });
 
   app.post('/', async (req, res) => {
-    const newItem = Note(req.body).save((err, data) => {
+    Note(req.body).save((err, nota) => {
       if (err) throw err;
-      res.json(data);
+      console.log(`Aggiunta: ${nota}`);
+      res.json(nota);
     });
   });
 
-  app.delete('/:item', async (req, res) => {
-    Note.find({ item: req.params.item.replace(/-/g, ' ') }).remove(
-      (err, data) => {
-        if (err) throw err;
-        res.json(data);
-      },
-    );
+  app.delete('/', async (req, res) => {
+    console.log(req.body);
+    Note.findByIdAndDelete(req.body.noteId, (err, nota) => {
+      if (err) throw err;
+      console.log(`Cancellata: ${nota}`);
+      res.json(nota);
+    });
   });
 };

@@ -10,13 +10,13 @@
 <body>
   <div id="todo-table">
     <form>
-      <input type="text" name="item" placeholder="nuova nota" required />
-      <input type="submit" class="button" value="inserisci nota" />
+      <input type="text" name="item" placeholder="A cosa stai pensando?" required />
+      <input type="submit" class="button" value="Invia" />
     </form>
   </div>
   <main>
     <% data.forEach(element => { %>
-    <div class="postit"><%= element.item %></div>
+    <div class="postit" onclick="deleteNote('<%= element._id %>')"><%= element.item %></div>
     <% }) %>
   </main>
 </body>

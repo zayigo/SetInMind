@@ -1,32 +1,30 @@
-$(document).ready(function () {
-  $('form').on('submit', function () {
-    let item = $('form input'); // user input
-    let note = { item: item.val() };
-
-    $.ajax({
-      // make ajax request
-      type: 'POST',
-      url: '/',
-      data: note,
-      success: function (data) {
-        // on add success
-        //do something with the data via front-end framework
-        location.reload();
+$(document).ready(() => {
+  $('form').on('submit', () => {
+    const input = $('form input'); // user input
+    fetch('/', {
+      method: 'post',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
       },
-    });
-
-    return false;
-  });
-
-  $('.postit').on('click', function () {
-    var item = $(this).text().replace(/ /g, '-'); // TODO: encode url?
-    $.ajax({
-      type: 'DELETE',
-      url: '/' + item,
-      success: function (data) {
-        //do something with the data via front-end framework
-        location.reload();
-      },
-    });
+      body: JSON.stringify({ item: input.val() }),
+    })
+      .then(window.location.reload())
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   });
 });
+
+const deleteNote = (noteId) => {
+  fetch('/', {
+    method: 'delete',
+    headers: {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ noteId }),
+  })
+    .then(window.location.reload())
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+};
