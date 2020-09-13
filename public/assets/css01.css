@@ -74,8 +74,11 @@ main {
   align-content: flex-start;
 }
 
-.postit {
-  background-color: rgb(0, 238, 255);
+.postit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181c22;
   max-width: 200px;
   min-width: 200px;
   min-height: 180px;
@@ -84,11 +87,7 @@ main {
   margin-bottom: 2%;
   margin-left: 5%;
   margin-right: 5%;
-  text-align: center;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  flex-grow: 1;
-  flex-basis: content;
+  padding: 1%;
 }
 
 .postit:hover {
