@@ -19,28 +19,82 @@ body {
   display: block;
   clear: both;
 }
+@media screen and (min-width: 1500px) {
+  input[type='text'] {
+    width: 70%;
+    padding: 20px;
+    background: #181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+  }
+  
+  input.button {
+    padding: 20px;
+    width: 27%;
+    float: left;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+  
+@media screen and (max-width: 1500px){
+  input[type='text'] {
+    width: 68%;
+    padding: 20px;
+    background: #181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+  }
 
-input[type='text'] {
-  width: 70%;
-  padding: 20px;
-  background: #181c22;
-  border: 0;
-  float: left;
-  font-size: 20px;
-  color: #989898;
+  input.button {
+    padding: 20px;
+    width: 27%;
+    float: left;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
 }
 
-input.button {
-  padding: 20px;
-  width: 27%;
-  float: left;
-  background: #23282e;
-  border: 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
+@media screen and (max-width: 950px){
+  input[type='text'] {
+    width: 65%;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #181c22;
+    border: 0;
+    float: left;
+    font-size: 20px;
+    color: #989898;
+  }
+
+  input.button {
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 22%;
+    float: left;
+    background: #23282e;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
 }
+
 
 ul {
   list-style-type: none;
