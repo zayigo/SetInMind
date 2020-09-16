@@ -14,6 +14,18 @@ input[type='text'] {
   color: #989898;
 }
 
+input.button {
+  padding: 20px;
+  width: 26%;
+  float: left;
+  background: #23282e;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 950px){
   input[type='text'] {
     width: 65%;
